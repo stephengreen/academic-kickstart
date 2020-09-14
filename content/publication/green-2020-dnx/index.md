@@ -35,4 +35,5 @@ abstract: 'The LIGO and Virgo gravitational-wave observatories have detected man
 publication: ''
 
 url_pdf: 'https://arxiv.org/pdf/2008.03312'
+url_code: 'https://github.com/stephengreen/lfi-gw'
 ---
