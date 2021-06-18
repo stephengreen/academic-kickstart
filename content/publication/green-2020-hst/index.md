@@ -32,7 +32,7 @@ image:
 projects: ["inference"]
 publishDate: '2020-08-23T10:36:00.205855Z'
 publication_types:
-- 3
+- 2
 abstract: 'We introduce the use of autoregressive normalizing flows for rapid
   likelihood-free inference of binary black hole system parameters
   from gravitational-wave data with deep neural networks. A
@@ -61,7 +61,8 @@ abstract: 'We introduce the use of autoregressive normalizing flows for rapid
   and most uncertainties are well-recovered. In all cases,
   sampling is extremely fast, requiring less than two seconds to draw
   $10^4$ posterior samples.'
-publication: ''
+publication: '*Phys. Rev. D* **102** 104057 (2020) 10'
+doi: '10.1103/PhysRevD.102.104057'
 
-url_pdf: 'https://arxiv.org/pdf/2002.07656'
+url_pdf: 'https://journals.aps.org/prd/pdf/10.1103/PhysRevD.102.104057'
 ---
