@@ -1,12 +1,12 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Deep Learning for Compact Binaries"
-summary: "Use normalizing flows for Bayesian inference of system parameters from gravitational-wave detector data."
+title: "Machine Learning for Compact Binaries"
+summary: "Use neural posterior estimation for Bayesian inference of system parameters from gravitational-wave detector data."
 authors: []
 tags: []
 categories: []
-date: 2020-08-01
+date: 2021-07-01
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -15,7 +15,7 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Parameter inference for GW150914, comparing standard sampler (blue) and neural network (orange)."
+  caption: "Inferred masses for eight events from the first Graviational-Wave Transient Catalog, comparing neural posterior estimation (in color) versus a standard sampler (in gray). 90% credible regions are shown."
   focal_point: ""
   preview_only: false
 
@@ -39,17 +39,35 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-The central goal in interpreting gravitational-wave detector data is to determine the system parameters that could have given rise to the observed strain. This is accomplished with Bayesian inference. Given a *likelihood* $p(s|\theta)$ for strain $s$ given system parameters $\theta$, and a *prior* $p(\theta)$ for the parameters, the *posterior* probability is given by
+The central goal in analyzing data from gravitational-wave detectors is to determine the properties of the source (e.g., the masses, spins, location, etc. of the binary) that could have given rise to the observed data. This is accomplished with Bayesian inference. Given a *likelihood* $p(d|\theta)$ for data $d$ given system parameters $\theta$, and a *prior* $p(\theta)$ for the parameters, the *posterior* probability is given by
 $$
-p(\theta|s) = \frac{p(s|\theta)p(\theta)}{p(s)},
+p(\theta|d) = \frac{p(d|\theta)p(\theta)}{p(d)},
 $$
-where $p(s)$ is a normalizing factor called the *evidence*. The likelihood is the probability that $s = h(\theta) + n$, where $h(\theta)$ is a signal waveform and $n$ is stationary Gaussian noise.
+where $p(d)$ is a normalizing factor called the *evidence*. The likelihood is the probability that $d = h(\theta) + n$, where $h(\theta)$ is a signal waveform and $n$ is stationary Gaussian noise.
 
-The task then is to obtain samples $\theta \sim p(\theta|s)$, which is usually accomplished using an algorithm such as Markov Chain Monte Carlo or nested sampling. Essentially, one explores the parameter space and compares the waveform model to the observed strain by calculating the likelihood. This can be very computationally costly, as each likelihood evaluation requires a waveform evaluation, which can be expensive for models that include realistic physics. Moreover, as detectors such as LIGO and Virgo become more sensitive, the rate of detections will increase, and inference must be performed on each event.
+The task of inference is to obtain samples $\theta \sim p(\theta|d)$. This is usually accomplished using an algorithm such as Markov Chain Monte Carlo: one explores the parameter space and compares simulated waveforms to the data. This can be very computationally costly, however, as a single analysis can require millions of waveform simulations, which is especially expensive for waveform models that include the most realistic physics. In addition, as detectors such as LIGO and Virgo become more sensitive, the rate of detections will increase, and inference must be performed on each event.
 
-The goal of this project is to train a neural-network conditional density estimator $q(\theta|s)$ to approximate $p(\theta|s)$. Once trained, the network could rapidly provide samples $\theta \sim q(\theta|s)$ for *any* $s$, making inference much faster.
+The goal of this research project is to train a neural network to learn an *inverse* model for the system parameters given the data. Once trained, this can instantly provide posterior samples for any observed data. We approximate the posterior using so-called "normalizing flows", which allow us to represent the complicated posterior in terms of a mapping (depending on the data) from a much simpler distribution,
+$$
+f_d : u \to \theta,
+$$
+where $u$ is normally-distributed and of the same dimension as $\theta$. This gives rise to a distribution
+$$
+q(\theta|d) = \mathcal{N}(0,\mathbb{1})(f_d^{-1}(\theta)) \left| \det J_{f_d^{-1}} \right|.
+$$
 
-In my most recent work (with J. Gair) we used a [neural spline](https://arxiv.org/abs/1906.04032) normalizing flow to define $q(\theta|s)$. This gives rise to a very flexible conditional density estimator, which enabled us to do inference on the first gravitational-wave event, GW150914. This was the first work to accurately infer all 15 parameters that characterize a binary black hole merger using deep learning, and to use real gravitational strain data. In the figure above, we compare results obtained using the `dynesty` sampler with the neural network, and one can see that they are in very good agreement.
+To train the network, we use millions of simulated data sets $(\theta,d)$. We also condition the network on the noise characteristics of the detectors, to account for noise nonstationarity from event to event. Training takes $\approx 3$ weeks, but then we can perform inference on any event in about a minute. This compares to roughly a day using standard methods.
 
-Going forward, there are many directions still to pursue, in particular improving the treatment of detector noise, so that the training can be amortized over many events.
+(Quasicircular) binary black hole systems are characterized by 15 parameters, and our networks are able to infer all of them simultaneously, with results in very close agreement with standard analysis codes.
 
+![](/media/posterior_GW170823_all.jpg)
+
+We are currently working on building a nice code, called "Dingo", which we plan to make publicly available. Beyond that the next steps are to
+
+* Train inverse models using waveform models with higher radiation multipoles and more realistic precession. This should enable the routine use of these expensive models in analyses.
+
+* Extend to binary neutron stars, which have much longer waveforms. This is especially important for rapid alerts to standard telescopes, since these events are much more likely to have multimessenger counterpart signals.
+
+* Include a more treatment of more realistic (nonstatioanry or non-Gaussian) noise. This is challenging for conventional approaches, but can be done naturally using likelihood-free inference methods such as ours. This will lead to more accurate inference results.
+
+![Skymap](/media/skymap.jpg)
