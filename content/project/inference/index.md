@@ -59,7 +59,7 @@ which we then train to approximate $p(\theta|d). To train the network, we use mi
 
 Quasicircular binary black hole systems are characterized by 15 parameters, and our networks are able to infer all of them simultaneously, with results in very close agreement with standard analysis codes.
 
-![](/media/posterior_GW170823_all.jpg)
+![Posterior distribution for GW170823, comparing Dingo and LALInference.](/media/posterior_GW170823_all.jpg)
 
 We are currently working on building a user-friendly code, called "Dingo", which we plan to make publicly available. Beyond that the next steps are to
 
