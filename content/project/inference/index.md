@@ -55,7 +55,7 @@ where $u$ is normally-distributed and of the same dimension as $\theta$. This gi
 $$
 q(\theta|d) = \mathcal{N}(0,\mathbb{1})(f_d^{-1}(\theta)) \left| \det J_{f_d^{-1}} \right|,
 $$
-which we then train to approximate $p(\theta|d). To train the network, we use millions of simulated data sets $(\theta^{(i)},d^{(i)}) \sim p(\theta,d)$. We also condition the network on the noise characteristics of the detectors, to account for noise nonstationarity from event to event. Training takes $\approx 3$ weeks, but then we can perform inference on any event in about a minute. This compares to roughly a day using standard methods.
+which we then train to approximate $p(\theta|d)$. To train the network, we use millions of simulated data sets $(\theta^{(i)},d^{(i)}) \sim p(\theta,d)$. We also condition the network on the noise characteristics of the detectors, to account for noise nonstationarity from event to event. Training takes $\approx 3$ weeks, but then we can perform inference on any event in about a minute. This compares to roughly a day using standard methods.
 
 Quasicircular binary black hole systems are characterized by 15 parameters, and our networks are able to infer all of them simultaneously, with results in very close agreement with standard analysis codes.
 
