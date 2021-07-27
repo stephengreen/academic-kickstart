@@ -18,12 +18,21 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Senior Scientist"
+  company = "Max Planck Institute for Gravitational Physics"
+  company_url = "http://www.aei.mpg.de"
+  location = "Potsdam, Germany"
+  date_start = "2021-07-16"
+  date_end = ""
+  description = ""
+
+[[experience]]
   title = "Postdoc / Junior Scientist"
   company = "Max Planck Institute for Gravitational Physics"
   company_url = "http://www.aei.mpg.de"
   location = "Potsdam, Germany"
   date_start = "2017-09-01"
-  date_end = ""
+  date_end = "2021-07-15"
   description = ""
 
 [[experience]]
