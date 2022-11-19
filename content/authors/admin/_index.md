@@ -10,15 +10,15 @@ authors:
 superuser: true
 
 # Role/position
-role: Senior Scientist
+role: Nottingham Research Fellow
 
 # Organizations/Affiliations
 organizations:
-- name: Max Planck Institute for Gravitational Physics, Potsdam
-  url: "http://www.aei.mpg.de/"
+- name: University of Nottingham -- School of Mathematical Sciences
+  url: "https://www.nottingham.ac.uk/mathematics/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a theoretical physicist studying gravitational waves, currently based in Berlin. My main interests are in black hole perturbation theory and applying machine-learning methods to analyze LIGO data.
+bio: I am a theoretical physicist studying gravitational waves, based at the University of Nottingham. My main interests are in black hole perturbation theory and applying probabilistic machine-learning methods to analyze LIGO data.
 
 interests:
 - Gravitational Waves
@@ -44,7 +44,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:stephen.green@aei.mpg.de'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:stephen.green2@nottingham.ac.uk'  # For a direct email link, use "mailto:test@example.org".
 # - icon: twitter
 #   icon_pack: fab
 #   link: https://twitter.com/stephen_r_green
@@ -76,6 +76,6 @@ user_groups:
 - Visitors
 ---
 
-I am a physicist studying gravitational waves at the Albert Einstein Institute in Potsdam. My current research interests are in [black hole perturbation theory](project/teukolsky) and [machine-learning methods for data analysis](project/inference).
+I am a physicist studying gravitational waves at the University of Nottingham in the [School of Mathematical Sciences](https://www.nottingham.ac.uk/mathematics/). My current research interests are in [black hole perturbation theory](project/teukolsky) and [machine-learning methods for data analysis](project/inference).
 
-I grew up in Toronto, Canada, where I attended the University of Toronto. I obtained my PhD in physics at the University of Chicago under [Robert Wald](https://en.wikipedia.org/wiki/Robert_Wald), where I studied effects of general relativity in cosmology and [debunked the idea that small scale structure could drive cosmological acceleration and mimic dark energy](project/backreaction). I then moved to the University of Guelph and Perimeter Institute, where I studied [turbulence in gravitational waves](project/ads-stability) and black hole [superradiant instabilities](project/superradiance). Now I am a member of LIGO, and my work focuses on gravitational waves.
+I grew up in Toronto, Canada, where I attended the University of Toronto. I obtained my PhD in physics at the University of Chicago under [Robert Wald](https://en.wikipedia.org/wiki/Robert_Wald), where I studied effects of general relativity in cosmology and [debunked the idea that small scale structure could drive cosmological acceleration and mimic dark energy](project/backreaction). I then moved to the University of Guelph and Perimeter Institute, where I studied [turbulence in gravitational waves](project/ads-stability) and black hole [superradiant instabilities](project/superradiance). I then spent five years at the Albert Einstein Institute in Potsdam, where I became a member of LIGO and worked on gravitational waves.

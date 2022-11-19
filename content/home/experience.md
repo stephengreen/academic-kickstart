@@ -18,12 +18,21 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
+  title = "Nottingham Research Fellowship"
+  company = "University of Nottingham -- School of Mathematical Sciences"
+  company_url = "https://www.nottingham.ac.uk/mathematics/"
+  location = "Nottingham, UK"
+  date_start = "2022-11-01"
+  date_end = ""
+  description = "Three-year fellowship linked to a permanent faculty position <br>Includes £25,000 / year in research funding"
+
+[[experience]]
   title = "Senior Scientist"
   company = "Max Planck Institute for Gravitational Physics"
   company_url = "http://www.aei.mpg.de"
   location = "Potsdam, Germany"
   date_start = "2021-07-16"
-  date_end = ""
+  date_end = "2022-10-31"
   description = ""
 
 [[experience]]

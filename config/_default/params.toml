@@ -88,16 +88,16 @@ show_related = {docs = true, page = false, post = true, project = true, publicat
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "stephen.green@aei.mpg.de"
+email = "stephen.green2@nottingham.ac.uk"
 phone = "+49 1520 8435588"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Am Mühlenberg 1", city = "Potsdam-Golm", region = "BB", postcode = "14476", country = "Germany", country_code = "DE"}
+address = {street = "Mathematical Sciences Building, University Park", city = "Nottingham", region = "", postcode = "NG7 2RD", country = "United Kingdowm", country_code = "GB"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "52.416419", longitude = "12.970750"}
+coordinates = {latitude = "52.94067", longitude = "-1.19179"}
 
 # Directions for visitors to locate you.
 # directions = "Enter Building 1 and take the stairs to Office 200 on Floor 2"

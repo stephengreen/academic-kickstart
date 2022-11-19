@@ -15,7 +15,7 @@ tags: []
 categories: []
 date: '2021-06-25'
 lastmod: 2020-08-23T12:36:00+02:00
-featured: true
+featured: false
 draft: false
 
 # Featured image
@@ -36,8 +36,8 @@ publishDate: '2021-06-25'
 publication_types:
 - 2
 abstract: 'We demonstrate unprecedented accuracy for rapid gravitational-wave parameter estimation with deep learning. Using neural networks as surrogates for Bayesian posterior distributions, we analyze eight gravitational-wave events from the first LIGO-Virgo Gravitational-Wave Transient Catalog and find very close quantitative agreement with standard inference codes, but with inference times reduced from O(day) to a minute per event. Our networks are trained using simulated data, including an estimate of the detector-noise characteristics near the event. This encodes the signal and noise models within millions of neural-network parameters, and enables inference for any observed data consistent with the training distribution, accounting for noise nonstationarity from event to event. Our algorithm---called “DINGO”---sets a new standard in fast-and-accurate inference of physical parameters of detected gravitational-wave events, which should enable real-time data analysis without sacrificing accuracy.'
-publication: ''
-doi: ''
+publication: '*Phys. Rev. Lett.*'
+doi: '10.1103/PhysRevLett.127.241103'
 
 url_pdf: 'https://arxiv.org/pdf/2106.12594'
 ---
