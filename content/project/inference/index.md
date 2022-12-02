@@ -15,7 +15,7 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Inferred masses for eight events from the first Graviational-Wave Transient Catalog, comparing neural posterior estimation (in color) versus a standard sampler (in gray). 90% credible regions are shown."
+  caption: "Inferred masses and effective spin parameters for events from the second and third Graviational-Wave Transient Catalogs. Results come from Dingo-IS. The two colors refer to two different waveform models."
   focal_point: ""
   preview_only: false
 
