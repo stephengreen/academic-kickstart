@@ -76,6 +76,6 @@ user_groups:
 - Visitors
 ---
 
-I am a physicist studying gravitational waves at the University of Nottingham in the [School of Mathematical Sciences](https://www.nottingham.ac.uk/mathematics/). My current research interests are in [black hole perturbation theory](project/teukolsky) and [machine-learning methods for data analysis](project/inference).
+I am a [researcher](https://www.nottingham.ac.uk/mathematics/people/stephen.green2) in gravitational waves at the University of Nottingham in the [School of Mathematical Sciences](https://www.nottingham.ac.uk/mathematics/). My current interests are in [black hole perturbation theory](project/teukolsky) and [machine-learning methods for data analysis](project/inference).
 
 I grew up in Toronto, Canada, where I attended the University of Toronto. I obtained my PhD in physics at the University of Chicago under [Robert Wald](https://en.wikipedia.org/wiki/Robert_Wald), where I studied effects of general relativity in cosmology and [debunked the idea that small scale structure could drive cosmological acceleration and mimic dark energy](project/backreaction). I then moved to the University of Guelph and Perimeter Institute, where I studied [turbulence in gravitational waves](project/ads-stability) and black hole [superradiant instabilities](project/superradiance). I then spent five years at the Albert Einstein Institute in Potsdam, where I became a member of LIGO and worked on gravitational waves.
